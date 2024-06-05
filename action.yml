@@ -1,0 +1,19 @@
+name: 'JWT Generator'
+description: 'Generate JWT tokens (JSON Web Tokens)'
+author: 'Marton Papp <morz@morz.hu>'
+inputs:
+  payload:
+    description: 'The payload to encrypt'
+  privateKey:
+    description: 'The privateKey used to sign the JWTs'
+  expiresIn:
+    description: 'For signing the token with expiration'
+outputs:
+  token:
+    description: 'Generated JWT Token'
+runs:
+  using: 'node12'
+  main: 'lib/main.js'
+branding:
+  icon: 'lock'
+  color: 'yellow'
